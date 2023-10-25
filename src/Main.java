@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
@@ -94,7 +95,7 @@ public class Main {
         int recipeWeightGr = bananaCount*bananaWeight+milkMl*milkWeight+
                 iceCreamCount*iceCreamWeight+eggCount*eggWeight;
 
-        float recipeWeightKg = (float) recipeWeightGr / 1000;
+        float recipeWeightKg = (float) recipeWeightGr / grPerKg;
 
         System.out.println("Вес рецепта в граммах "+recipeWeightGr);
         System.out.println("Вес рецепта в килограммах "+recipeWeightKg);
@@ -104,8 +105,8 @@ public class Main {
         byte decrWeightKg = 7;
         short minLoose = 250;
         short maxLoose = 500;
-        int maxDays = decrWeightKg*1000/minLoose;
-        int minDays = decrWeightKg*1000/maxLoose;
+        int maxDays = decrWeightKg*grPerKg/minLoose;
+        int minDays = decrWeightKg*grPerKg/maxLoose;
         float averDays = (float) (minDays+maxDays)/2;
 
         System.out.println("При минимальных потерях "+maxDays+" дней");
@@ -138,4 +139,6 @@ public class Main {
         System.out.println("Маша теперь получает "+newKrisSalYear+
                 " рублей. Годовой доход вырос на "+diffKrisSalYear+" рублей");
     }
+
+    final static int grPerKg = 1000;
 }
