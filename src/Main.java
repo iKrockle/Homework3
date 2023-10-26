@@ -107,11 +107,11 @@ public class Main {
         short maxLoose = 500;
         int maxDays = decrWeightKg*grPerKg/minLoose;
         int minDays = decrWeightKg*grPerKg/maxLoose;
-        float averDays = (float) (minDays+maxDays)/2;
+        float avgDays = (float) (minDays+maxDays)/2;
 
         System.out.println("При минимальных потерях "+maxDays+" дней");
         System.out.println("При максимальных потерях "+minDays+" дней");
-        System.out.println("В среднем "+averDays+" дней");
+        System.out.println("В среднем "+avgDays+" дней");
     }
 
     public static void task8(){
